@@ -11,9 +11,13 @@
 
 @interface CMScrollview : UIView
 
+@property (nonatomic, strong) NSArray *imageArray;
+
 - (instancetype)initWithFrame:(CGRect)frame
                        images:(NSArray *)images
                       andTime:(CGFloat)changeTime
                andActionBlock:(void(^)(NSInteger currentIndex))block;
+
+-(void)upDateImageArray:(NSArray *)imageArray isTimerRun:(BOOL)isrun;
 
 @end
